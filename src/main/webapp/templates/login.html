@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace=header::link>
+<meta charset="ISO-8859-1">
+<title>Login here</title>
+
+</head>
+
+<body>
+
+<div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
+    <div class="d-flex justify-content-center align-items-center h-100">
+<div class="container  pt-3">
+<div class="center">
+<div class="col-4 bg-warning">
+
+	<h3 class="text-center mt-5 text-info font-weight-bold">Login Page</h3>
+	
+
+
+
+		
+				<img alt="d" th:src="@{img/log.jpg}" width="300px" height="300px">
+			
+			
+				<h4 class="text-center font-weight-bold text-success">Please Provide Credentials
+					</h4>
+				<form th:action="@{/onlogin}" th:object="${customer}" method="post">
+				
+					<input type="text" class="form-control my-2" name="email" id="email"
+						placeholder="Enter UserName"> <input type="password"
+						class="form-control password" id="password" name="password" placeholder="Enter Password"required><br>
+					<button type="submit" id="login"class="btn btn-info">Login</button>
+					
+				</form>
+				
+					<p class="font-weight-bold"><a th:href="@{/signup}" class="text-info"><small>Don't Have an Account ?</small></a></p>
+	</div>	
+	</div>
+	</div>
+	   </div>
+  </div>
+</div>
+	
+
+
+</body>
+</html>

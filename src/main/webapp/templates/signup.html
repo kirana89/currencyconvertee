@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace=header::link>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+
+<div class="container pt-3">
+<div style="text-align:center;;width: 400px;margin: 0 auto;border-style: dotted;">
+	
+<img alt="d" th:src="@{img/bee.jfif}" width="250px" height="250px">
+<div class="col-sm-12 bg-dark text-white">
+
+
+	<form th:action="@{/onsignup}" th:object="${customer}" method="post">
+	<br>
+		<input type="text" class="form-control name" name="name" placeholder="Enter Name" id="name"required><br>
+		<input type="text" class="form-control mno" name="mno" placeholder="Enter Mobile" id="mno"required><br>
+		<input type="email" class="form-control email" name="email" placeholder="Enter Email" id="email"required><br>
+		<textarea type="text" placeholder="Enter Address" name="address" class="form-control address"
+			id="address"></textarea><br>
+		<input type="password" class="form-control password" name="password" placeholder="Enter Password" id="password">
+		<br>
+		
+		<button type="submit"id="signup" class="btn btn-info">SignUp</button>
+		<div class="text-center my-1" style="cursor: pointer">
+		<a th:href="@{/login}" class="text-success"><small>
+				Have an Account ?</small></a>
+	</div>
+	</form>
+	
+</div>
+
+</div>
+	</div>
+	</div>
+</body>
+</html>
